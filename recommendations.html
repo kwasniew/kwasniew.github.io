@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="styles.css">
 
 <style>
+  /* imported autmatically */
   .recommendation {
     color: red;
   }
@@ -10,18 +11,20 @@
   You should read node.js design patterns
 </div>
 
+<!-- imported automatically -->
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
+<!-- imported automatically -->
 <script>  
   var thisDoc = document.currentScript.ownerDocument;
 
   var thatDoc = document;
 
-  // copy HTML
+  // explicit HTML import
   var content = thisDoc.querySelector('.recommendation');
   thatDoc.querySelector('.recommendationsPlaceholder').appendChild(thatDoc.importNode(content, true));
 
-  // copy CSS
+  // explicit link import
   var styles = thisDoc.querySelector('link[rel="stylesheet"]');
   thatDoc.head.appendChild(styles.cloneNode(true));
 
