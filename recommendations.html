@@ -19,7 +19,7 @@
 
   // copy HTML
   var content = thisDoc.querySelector('.recommendation');
-  thatDoc.querySelector('recommendationsPlaceholder').appendChild(thatDoc.importNode(content, true));
+  thatDoc.querySelector('.recommendationsPlaceholder').appendChild(thatDoc.importNode(content, true));
 
   // copy CSS
   var styles = thisDoc.querySelector('link[rel="stylesheet"]');
