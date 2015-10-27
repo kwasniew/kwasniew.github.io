@@ -14,3 +14,12 @@
       console.log('Tracking clicks on recommendation');
    });
 </script>
+
+<script>  
+  var thisDoc = document.currentScript.ownerDocument;
+
+  var thatDoc = document;
+
+  var content = thisDoc.querySelector('.recommendation');
+  thatDoc.body.appendChild(thatDoc.importNode(content, true));
+</script>
