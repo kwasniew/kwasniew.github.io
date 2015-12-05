@@ -5,10 +5,17 @@
   .recommendation {
     color: red;
   }
+  .hidden {
+    display: none;
+  }
 </style>
 
 <div class="recommendation">
   You should read node.js design patterns
+</div>
+
+<div class="recommendationsPlaceholder hidden">
+  
 </div>
 
 <!-- imported automatically -->
@@ -22,6 +29,7 @@
 
   // explicit HTML import
   var content = thisDoc.querySelector('.recommendation');
+  
   thatDoc.querySelector('.recommendationsPlaceholder').appendChild(thatDoc.importNode(content, true));
 
   // explicit link import
